@@ -53,10 +53,10 @@ pipeline {
     stage('Performance Check') {
       steps {
         recordDynatraceSession(
-          envId: 'Dynatrace Tenant',
+          /*envId: 'Dynatrace Tenant',
           testCase: 'loadtest',
           tagMatchRules: tagMatchRules
-        ) 
+        ) */
         {
           container('jmeter') {
             script {
@@ -83,11 +83,11 @@ pipeline {
         echo "Waiting for a minute so data can be processed in Dynatrace"
         sleep(60)
 
-        perfSigDynatraceReports(
+        /*perfSigDynatraceReports(
           envId: 'Dynatrace Tenant', 
           nonFunctionalFailure: 1, 
           specFile: "monspec/${env.APP_NAME}_perfsig.json"
-        ) 
+        ) */
       }
     }
   }
