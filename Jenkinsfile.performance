@@ -57,7 +57,7 @@ pipeline {
           testCase: 'loadtest',
           tagMatchRules: tagMatchRules
         ) */
-        {
+        //{
           container('jmeter') {
             script {
               def status = executeJMeter ( 
@@ -78,7 +78,7 @@ pipeline {
               }
             }
           }
-        }
+        //}
 
         echo "Waiting for a minute so data can be processed in Dynatrace"
         sleep(60)
