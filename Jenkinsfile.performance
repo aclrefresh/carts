@@ -52,8 +52,8 @@ pipeline {
 
     stage('Performance Check') {
       steps {
-        recordDynatraceSession(
-          /*envId: 'Dynatrace Tenant',
+        /*recordDynatraceSession(
+          envId: 'Dynatrace Tenant',
           testCase: 'loadtest',
           tagMatchRules: tagMatchRules
         ) */
